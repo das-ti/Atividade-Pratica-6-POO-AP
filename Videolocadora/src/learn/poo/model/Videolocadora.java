@@ -7,7 +7,6 @@ public class Videolocadora {
     private int[] vezesAlugado;
 
     private int qtdFilmes;
-    private int qtdCopia;
 
     public Videolocadora(int qtdFilmes) {
         this.qtdFilmes = qtdFilmes;
@@ -60,12 +59,9 @@ public class Videolocadora {
             if (i == this.qtdFilmes) {
                 tituloFilme = filmes[c];
                 this.vezesAlugado[c]++;
-                this.qtdCopia -= qtdFilmes;
             }
-
         }
         return "Locação do filme " + tituloFilme + " foi realizada!";
-
     }
 
     public void devolverFilme() {
